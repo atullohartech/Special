@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#22002f">
+
+<title>Happy Birthday Shivani ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+    --pink:#ff65b5;
+    --purple:#a855f7;
+    --dark:#190020;
+    --white:#fff5fc;
+}
+
+body{
+    font-family:'Trebuchet MS',sans-serif;
+    background:linear-gradient(135deg,#190020,#43004f,#170020);
+    color:white;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+button{
+    border:none;
+    outline:none;
+    cursor:pointer;
+    font-family:inherit;
+}
+
+.page{
+    display:none;
+    min-height:100vh;
+    width:100%;
+    padding:35px 18px 100px;
+    text-align:center;
+    animation:appear .8s ease;
+}
+
+.page.active{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+@keyframes appear{
+    from{opacity:0;transform:translateY(25px)}
+    to{opacity:1;transform:translateY(0)}
+}
+
+h1{
+    font-size:clamp(32px,8vw,65px);
+    color:#ff9bd6;
+    text-shadow:0 0 20px #ff45ad;
+    margin-bottom:20px;
+}
+
+h2{
+    font-size:clamp(25px,6vw,40px);
+    color:#ff9bd6;
+    margin-bottom:20px;
+}
+
+p{
+    font-size:17px;
+    line-height:1.8;
+}
+
+button.main{
+    padding:14px 30px;
+    margin-top:25px;
+    border-radius:50px;
+    color:white;
+    font-size:17px;
+    font-weight:bold;
+    background:linear-gradient(45deg,#ff399e,#a855f7);
+    box-shadow:0 0 20px #ff45ad;
+    transition:.3s;
+}
+
+button.main:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 35px #ff45ad;
+}
+
+.emoji{
+    font-size:75px;
+    margin-bottom:20px;
+    animation:bounce 2s infinite;
+}
+
+@keyframes bounce{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-15px)}
+}
+
+/* MUSIC */
+
+#musicBtn{
+    position:fixed;
+    top:15px;
+    right:15px;
+    z-index:9999;
+    background:#ff55ad;
+    color:white;
+    border-radius:50px;
+    padding:12px 17px;
+    box-shadow:0 0 15px #ff55ad;
+}
+
+/* FLOATING HEARTS */
+
+.floating{
+    position:fixed;
+    bottom:-30px;
+    pointer-events:none;
+    z-index:0;
+    animation:floatUp linear forwards;
+}
+
+@keyframes floatUp{
+    to{
+        transform:translateY(-110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+/* SECTION 1 */
+
+.welcome-text{
+    font-size:20px;
+    color:#ffd5ed;
+}
+
+/* SECTION 2 */
+
+.wish-card{
+    max-width:600px;
+    padding:30px 25px;
+    border:1px solid #ff80cb;
+    border-radius:25px;
+    background:rgba(255,255,255,.08);
+    box-shadow:0 0 30px rgba(255,80,180,.3);
+}
+
+.typewriter{
+    min-height:180px;
+    color:#ffe4f3;
+    font-size:18px;
+    line-height:2;
+}
+
+/* SECTION 3 */
+
+/* PHOTO GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(2,minmax(0,1fr));
+gap:18px;
+width:100%;
+max-width:700px;
+margin:25px auto;
+}
+
+.photo-card{
+width:100%;
+height:260px;
+padding:10px;
+background:linear-gradient(135deg,#fff,#ffe1f2);
+border-radius:22px;
+overflow:hidden;
+box-shadow:0 0 20px rgba(255,80,180,.5);
+transition:transform .4s,box-shadow .4s;
+}
+
+.photo-card:hover{
+transform:scale(1.04);
+box-shadow:0 0 30px #ff65b5;
+}
+
+.photo-card img{
+width:100%;
+height:205px;
+display:block;
+object-fit:contain;
+object-position:center;
+background:#25002f;
+border-radius:15px;
+}
+
+.photo-card p{
+color:#a00069;
+font-size:15px;
+font-weight:bold;
+padding:7px 2px;
+text-align:center;
+}
+
+/* MOBILE */
+
+@media(max-width:480px){
+
+
+.gallery{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:10px;
+}
+
+.photo-card{
+    height:205px;
+    padding:7px;
+    border-radius:16px;
+}
+
+.photo-card img{
+    height:155px;
+    border-radius:11px;
+}
+
+.photo-card p{
+    font-size:12px;
+}
+}
+
+
+/* SECTION 4 */
+
+.hearts-container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    max-width:450px;
+    margin:25px auto;
+}
+
+.heart{
+    font-size:55px;
+    cursor:pointer;
+    filter:drop-shadow(0 0 12px #ff43b0);
+    transition:.3s;
+    animation:heartbeat 1.5s infinite;
+}
+
+.heart:hover{
+    transform:scale(1.3);
+}
+
+@keyframes heartbeat{
+    50%{transform:scale(1.15)}
+}
+
+.hidden-message{
+    display:none;
+    margin:15px auto;
+    padding:15px;
+    max-width:450px;
+    border-radius:15px;
+    background:rgba(255,100,190,.15);
+    border:1px solid #ff75bd;
+    animation:appear .5s;
+}
+
+/* SECTION 5 */
+
+.cake{
+    font-size:120px;
+    margin:15px;
+    filter:drop-shadow(0 0 20px #ff65b5);
+    animation:bounce 2s infinite;
+}
+
+.candle-message{
+    font-size:20px;
+    margin:15px;
+    color:#ffd1eb;
+}
+
+#birthdayWish{
+    display:none;
+    font-size:22px;
+    color:#ff9bd6;
+    margin:20px;
+    animation:appear 1s;
+}
+
+/* SECTION 6 */
+
+.quiz-box{
+    width:100%;
+    max-width:550px;
+    padding:25px;
+    background:rgba(255,255,255,.08);
+    border:1px solid #ff75c8;
+    border-radius:25px;
+}
+
+.question{
+    font-size:21px;
+    margin-bottom:20px;
+}
+
+.answer{
+    display:block;
+    width:100%;
+    padding:13px;
+    margin:10px 0;
+    border-radius:15px;
+    color:white;
+    font-size:16px;
+    background:linear-gradient(90deg,#8e24aa,#e91e83);
+    transition:.3s;
+}
+
+.answer:hover{
+    transform:scale(1.04);
+    box-shadow:0 0 15px #ff65b5;
+}
+
+#quizFeedback{
+    margin-top:20px;
+    color:#ffb4dd;
+    font-size:18px;
+}
+
+/* SECTION 7 */
+
+.final-card{
+    max-width:600px;
+    padding:30px 20px;
+    background:rgba(255,255,255,.08);
+    border:1px solid #ff73bd;
+    border-radius:25px;
+    box-shadow:0 0 30px #d633a5;
+}
+
+.big-heart{
+    font-size:100px;
+    animation:heartbeat 1s infinite;
+}
+
+#finalMessage{
+    margin-top:20px;
+    line-height:2;
+    font-size:19px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:480px){
+
+    .page{
+        padding:65px 15px 90px;
+    }
+
+    .gallery{
+        gap:10px;
+    }
+
+    .photo-card img{
+        height:145px;
+    }
+
+    .hearts-container{
+        gap:12px;
+    }
+
+    .heart{
+        font-size:45px;
+    }
+
+    .wish-card{
+        padding:22px 16px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- MUSIC BUTTON -->
+
+<audio id="bgMusic" loop preload="auto">
+    <source src="./zulfein.mpeg" type="audio/mpeg">
+</audio>
+
+<button id="musicBtn" onclick="toggleMusic()">
+    🎵 Play Music
+</button>
+
+<!-- SECTION 1 -->
+
+<section class="page active" id="page1">
+
+    <div class="emoji">🎁</div>
+
+    <h1>Hey Shivani! ❤️</h1>
+
+    <p class="welcome-text">
+        Someone special has a birthday today... 😏
+        <br><br>
+        And unfortunately, that someone is YOU!
+        😂
+        <br><br>
+        So get ready, Idiot! I've prepared something
+        special for you.
+    </p>
+
+    <button class="main" onclick="nextPage(2)">
+        Let's Start The Madness 💗
+    </button>
+
+</section>
+
+
+<!-- SECTION 2 -->
+
+<section class="page" id="page2">
+
+    <div class="emoji">🎂</div>
+
+    <h1>Happy Birthday!</h1>
+
+    <h2>Dear Shivani ❤️</h2>
+
+    <div class="wish-card">
+
+        <div class="typewriter" id="wishText"></div>
+
+    </div>
+
+    <button class="main" onclick="nextPage(3)">
+        Show Me Your Memories 📸
+    </button>
+
+</section>
+
+
+<!-- SECTION 3 -->
+
+<section class="page" id="page3">
+
+    <h1>Look How Beatiful Was you! 📸</h1>
+
+    <p>
+        Warning: Looking at these photos may cause
+        excessive smiling! 😂
+    </p>
+
+    <div class="gallery">
+
+        <!-- Replace these images with Shivani's photos -->
+
+        <div class="photo-card">
+            <img src="1714392335879.jpg" alt="Shivani Photo 1">
+            <p>Miss Idiot 😜</p>
+        </div>
+
+        <div class="photo-card">
+            <img src="IMG_20220619_162453_610.jpg" alt="Shivani Photo 2">
+            <p>My Favourite Trouble ❤️</p>
+        </div>
+
+        <div class="photo-card">
+            <img src="IMG-20251024-WA0003.jpg" alt="Shivani Photo 3">
+            <p>Drama Queen 😂</p>
+        </div>
+
+        <div class="photo-card">
+            <img src="IMG-20250824-WA0058.jpg" alt="Shivani Photo 4">
+            <p>Beautiful Soul 💗</p>
+        </div>
+
+    </div>
+
+    <button class="main" onclick="nextPage(4)">
+        How Special Am I? 😏
+    </button>
+
+</section>
+
+
+<!-- SECTION 4 -->
+
+<section class="page" id="page4">
+
+    <div class="emoji">💖</div>
+
+    <h1>Something Special</h1>
+
+    <p>
+        Shivani, there are some things
+        I don't say directly...
+        <br><br>
+        So I've hidden them inside these hearts.
+        Touch every heart to discover them! ❤️
+    </p>
+
+    <div class="hearts-container">
+
+        <div class="heart" onclick="showHeart(1)">💗</div>
+
+        <div class="heart" onclick="showHeart(2)">💖</div>
+
+        <div class="heart" onclick="showHeart(3)">💕</div>
+
+        <div class="heart" onclick="showHeart(4)">💘</div>
+
+        <div class="heart" onclick="showHeart(5)">💝</div>
+
+        <div class="heart" onclick="showHeart(6)">❤️</div>
+
+    </div>
+
+    <div id="message1" class="hidden-message">
+        You're not just a friend, you're a beautiful part of my life. ❤️
+    </div>
+
+    <div id="message2" class="hidden-message">
+        Even your irritating behaviour makes me smile. 😂
+    </div>
+
+    <div id="message3" class="hidden-message">
+        Our silly fights are some of my favourite memories.
+    </div>
+
+    <div id="message4" class="hidden-message">
+        Never stop being your crazy, naughty self! 😜
+    </div>
+
+    <div id="message5" class="hidden-message">
+        You deserve all the happiness in this world. 💗
+    </div>
+
+    <div id="message6" class="hidden-message">
+        And yes, Idiot... you're genuinely special to me. 🥹❤️
+    </div>
+
+    <p id="heartCount">Hearts discovered: 0/6</p>
+
+    <button class="main" onclick="nextPage(5)">
+        Time For Birthday Cake 🎂
+    </button>
+
+</section>
+
+
+<!-- SECTION 5 -->
+
+<section class="page" id="page5">
+
+    <h1>Birthday Celebration 🎉</h1>
+
+    <p class="candle-message">
+        Make a beautiful wish, Shivani! ✨
+        <br>
+        Your birthday cake is waiting!
+    </p>
+
+    <div class="cake" id="cake">
+        🎂
+    </div>
+
+    <p id="cakeInstruction">
+        Three candles are glowing just for you! 🕯️
+    </p>
+
+    <button class="main" id="blowButton" onclick="blowCandles()">
+        🌬️ Blow The Candles
+    </button>
+
+    <div id="birthdayWish">
+
+        🎉 WOOOHOOOO! 🎉
+
+        <br><br>
+
+        Your wish is on its way! 💗
+
+        <br><br>
+
+        May all your dreams come true.
+
+        <br>
+
+        Happy Birthday, Shivani! ❤️
+
+    </div>
+
+    <button class="main" id="cakeNext" style="display:none"
+    onclick="nextPage(6)">
+        Let's Play A Game 😂
+    </button>
+
+</section>
+
+
+<!-- SECTION 6 -->
+
+<section class="page" id="page6">
+
+    <div class="emoji">😂</div>
+
+    <h1>Friendship Quiz</h1>
+
+    <p>
+        Let's see how well you know our crazy friendship!
+        <br>
+        Don't cheat, Idiot! 😏
+    </p>
+
+    <div class="quiz-box">
+
+        <div class="question" id="question">
+            Question 1
+        </div>
+
+        <div id="answers"></div>
+
+        <div id="quizFeedback"></div>
+
+        <p id="quizScore"></p>
+
+    </div>
+
+    <button class="main" id="quizNext"
+    style="display:none" onclick="nextQuestion()">
+        Next Question ➡️
+    </button>
+
+    <button class="main" id="quizFinish"
+    style="display:none" onclick="nextPage(7)">
+        Unlock Final Surprise 🎁
+    </button>
+
+</section>
+
+
+<!-- SECTION 7 -->
+
+<section class="page" id="page7">
+
+    <div class="final-card">
+
+        <div class="big-heart">❤️</div>
+
+        <h1>One Last Surprise!</h1>
+
+        <h2>For My Idiot Shivani 🥹</h2>
+
+        <p id="finalMessage">
+
+            Life becomes more fun when someone like you
+            is around.
+
+            <br><br>
+
+            Keep smiling, keep laughing, keep irritating me,
+            and never change your beautiful personality.
+
+            <br><br>
+
+            I hope this new year of your life brings
+            unlimited happiness, success and unforgettable memories.
+
+            <br><br>
+
+            And remember...
+
+            <br><br>
+
+            You can fight with me, tease me,
+            and call me anything...
+
+            <br>
+
+            But you'll always be my favourite idiot! 😂❤️
+
+            <br><br>
+
+            HAPPY BIRTHDAY SHIVANI! 🎂💗
+
+        </p>
+
+        <button class="main" onclick="celebrateAgain()">
+            💖 Celebrate Again
+        </button>
+
+    </div>
+
+</section>
+
+
+<script>
+
+/* NAVIGATION */
+
+function nextPage(number){
+
+    document.querySelectorAll('.page').forEach(page=>{
+        page.classList.remove('active');
+    });
+
+    document.getElementById('page'+number).classList.add('active');
+
+    window.scrollTo({
+        top:0,
+        behavior:'smooth'
+    });
+
+    if(number===2){
+        startTyping();
+    }
+
+}
+
+
+/* MUSIC */
+
+const music = document.getElementById("bgMusic");
+const musicBtn = document.getElementById("musicBtn");
+
+let isPlaying = false;
+
+async function playMusic() {
+try {
+await music.play();
+isPlaying = true;
+musicBtn.innerHTML = "🔊 Music ON";
+} catch (error) {
+isPlaying = false;
+musicBtn.innerHTML = "🎵 Tap to Play";
+console.error("Music error:", error);
+}
+}
+
+// Start music after the first touch or click.
+document.addEventListener("pointerdown", function startFirstTime() {
+if (!isPlaying) {
+playMusic();
+}
+}, { once: true });
+
+function toggleMusic() {
+if (music.paused) {
+playMusic();
+} else {
+music.pause();
+isPlaying = false;
+musicBtn.innerHTML = "🔇 Music OFF";
+}
+}
+
+// Update button if music state changes.
+music.addEventListener("ended", () => {
+isPlaying = false;
+});
+
+music.addEventListener("error", () => {
+console.error("Cannot load birthday-song.mp3");
+});
+
+
+
+/* FLOATING HEARTS */
+
+function createHeart(){
+
+    const heart=document.createElement('div');
+
+    heart.className='floating';
+
+    const emojis=['❤️','💗','💕','💖','✨','🌸'];
+
+    heart.innerHTML=emojis[
+        Math.floor(Math.random()*emojis.length)
+    ];
+
+    heart.style.left=Math.random()*100+'vw';
+
+    heart.style.fontSize=(15+Math.random()*25)+'px';
+
+    heart.style.animationDuration=(4+Math.random()*5)+'s';
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>heart.remove(),9000);
+
+}
+
+setInterval(createHeart,500);
+
+
+/* SECTION 2 TYPEWRITER */
+
+const wishMessage=
+"Happy Birthday, Shivani! ❤️ Today is your special day, and I just want to remind you how amazing you are. You're funny, naughty, irritating, and sometimes a complete idiot! 😂 But honestly, life would be boring without your madness. Keep smiling, keep shining, and keep being the wonderful person you are. Wishing you endless happiness and success. Love you, idiot! 💗";
+
+let typingStarted=false;
+
+function startTyping(){
+
+    if(typingStarted) return;
+
+    typingStarted=true;
+
+    const target=document.getElementById('wishText');
+
+    let index=0;
+
+    function type(){
+
+        if(index<wishMessage.length){
+
+            target.innerHTML+=wishMessage.charAt(index);
+
+            index++;
+
+            setTimeout(type,35);
+
+        }
+
+    }
+
+    type();
+
+}
+
+
+/* SECTION 4 HEARTS */
+
+let discovered=0;
+
+function showHeart(number){
+
+    const message=document.getElementById('message'+number);
+
+    if(message.style.display==='block') return;
+
+    message.style.display='block';
+
+    discovered++;
+
+    document.getElementById('heartCount').innerText=
+    'Hearts discovered: '+discovered+'/6';
+
+}
+
+
+/* SECTION 5 CANDLE BLOW */
+
+function blowCandles(){
+
+    const cake=document.getElementById('cake');
+
+    cake.innerHTML='🎂💨';
+
+    document.getElementById('cakeInstruction').innerText=
+    'All candles have been blown out! 🥳';
+
+    document.getElementById('blowButton').style.display='none';
+
+    document.getElementById('birthdayWish').style.display='block';
+
+    document.getElementById('cakeNext').style.display='inline-block';
+
+    confetti();
+
+}
+
+
+/* QUIZ */
+
+const questions=[
+
+    {
+        q:"1. Who is the biggest idiot between us? 😂",
+        a:[
+            "Obviously Shivani 😜",
+            "Obviously YOU 😎",
+            "Both of us 🤣"
+        ],
+        correct:2,
+        msg:"Correct! Two idiots, one friendship! 😂"
+    },
+
+    {
+        q:"2. What happens when we start fighting?",
+        a:[
+            "World War 3 🌍",
+            "We stop talking forever",
+            "We start laughing again"
+        ],
+        correct:0,
+        msg:"Haha! Our fights deserve their own movie! 😂"
+    },
+
+    {
+        q:"3. What is my favourite thing about you?",
+        a:[
+            "Your naughty behaviour 😏",
+            "Your beautiful smile ❤️",
+            "Your irritating attitude 😂"
+        ],
+        correct:0,
+        msg:"Your naughty side is impossible to ignore! 😜"
+    },
+
+    {
+        q:"4. What happens when I flirt with you?",
+        a:[
+            "You blush 😊",
+            "You start fighting 😂",
+            "You pretend to ignore me 😎"
+        ],
+        correct:1,
+        msg:"Haha! I knew you'd start fighting! 😂❤️"
+    },
+
+    {
+        q:"5. How important are you to me?",
+        a:[
+            "Just another friend",
+            "My favourite idiot ❤️",
+            "My biggest headache"
+        ],
+        correct:1,
+        msg:"Exactly! My favourite idiot forever! 🥹❤️"
+    }
+
+];
+
+let currentQuestion=0;
+let score=0;
+
+function loadQuestion(){
+
+    const q=questions[currentQuestion];
+
+    document.getElementById('question').innerText=q.q;
+
+    document.getElementById('quizFeedback').innerText='';
+
+    document.getElementById('quizNext').style.display='none';
+
+    const answers=document.getElementById('answers');
+
+    answers.innerHTML='';
+
+    q.a.forEach((answer,index)=>{
+
+        const button=document.createElement('button');
+
+        button.className='answer';
+
+        button.innerText=answer;
+
+        button.onclick=()=>checkAnswer(index);
+
+        answers.appendChild(button);
+
+    });
+
+}
+
+function checkAnswer(index){
+
+    const q=questions[currentQuestion];
+
+    const buttons=document.querySelectorAll('.answer');
+
+    buttons.forEach(button=>{
+        button.disabled=true;
+        button.style.opacity='.65';
+    });
+
+    if(index===q.correct){
+
+        score++;
+
+        document.getElementById('quizFeedback').innerText=
+        '🎉 '+q.msg;
+
+    }else{
+
+        document.getElementById('quizFeedback').innerText=
+        'Wrong answer, Idiot! 😂 '+q.msg;
+
+    }
+
+    document.getElementById('quizScore').innerText=
+    'Score: '+score+'/'+questions.length;
+
+    if(currentQuestion===questions.length-1){
+
+        document.getElementById('quizNext').style.display='none';
+
+        document.getElementById('quizFinish').style.display='inline-block';
+
+    }else{
+
+        document.getElementById('quizNext').style.display='inline-block';
+
+    }
+
+}
+
+function nextQuestion(){
+
+    currentQuestion++;
+
+    loadQuestion();
+
+}
+
+
+/* CONFETTI */
+
+function confetti(){
+
+    const emojis=['🎉','💖','✨','🎊','❤️','🌸'];
+
+    for(let i=0;i<70;i++){
+
+        const element=document.createElement('div');
+
+        element.innerHTML=
+        emojis[Math.floor(Math.random()*emojis.length)];
+
+        element.style.position='fixed';
+
+        element.style.left=Math.random()*100+'vw';
+
+        element.style.top='-30px';
+
+        element.style.fontSize='25px';
+
+        element.style.zIndex='99999';
+
+        element.style.pointerEvents='none';
+
+        element.style.transition=
+        'transform 3s linear,opacity 3s';
+
+        document.body.appendChild(element);
+
+        setTimeout(()=>{
+
+            element.style.transform=
+            'translateY(110vh) rotate(720deg)';
+
+            element.style.opacity='0';
+
+        },50);
+
+        setTimeout(()=>element.remove(),3500);
+
+    }
+
+}
+
+
+/* FINAL CELEBRATION */
+
+function celebrateAgain(){
+
+    confetti();
+
+    for(let i=0;i<15;i++){
+
+        setTimeout(createHeart,i*100);
+
+    }
+
+}
+
+
+/* INITIALIZE QUIZ */
+
+loadQuestion();
+
+</script>
+
+</body>
+</html>
